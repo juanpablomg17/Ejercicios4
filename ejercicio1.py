@@ -9,6 +9,9 @@ class Empleado:
         self.__telefono = telefono
         self.__empresa = empresa
 
+    def __init__(self):
+        pass
+
     # métodos get
 
     def getid(self):
@@ -53,16 +56,34 @@ class Empleado:
         self.__telefono = telefono
 
     def setEmpresa(self, empresa):
-
+        self.__empresa = empresa
 
 
 class Pricipal(Empleado):
     pass
 
+
 def main():
-    p1 = Pricipal(1213,32423,234234,4324234,234234,324324,234324)
-
-    print(p1.getid)
 
 
+    p1 = Pricipal()
+    print("hola!!! \n por favor, digite los siguientes datos")
+    id = int(input("digite su id: "))
+    tipo_id = input("digite el tipo de id: ")
+    cargo = input("digite su cargo: ")
+    sueldo = input("digite su sueldo")
+    email = input("digite su email: ")
+    telefono = input("digite su telefono: ")
+    empresa = input("digite su empresa: ")
+
+    p1.setid(id)
+    p1.setTipo_id(tipo_id)
+    p1.setcargo(cargo)
+    p1.setSueldo(sueldo)
+    p1.setEmail(email)
+    p1.setTelefono(telefono)
+    p1.setEmpresa(empresa)
+
+    print(f"el id es: {p1.getid()} \n el tipo de id es: {p1.gettipo_id()} \n el cargo es: {p1.getcargo()} \n el sueldo es: {p1.getSueldo()} \n el email es: {p1.getEmail()} \n el telefono es: {p1.getTelefono()} \n la empresa es: {p1.getEmpresa()}")
+    
 main()
